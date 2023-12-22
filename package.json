@@ -1,12 +1,23 @@
 {
-  "name": "blog-tale-master",
+  "name": "blog-app",
   "version": "1.0.0",
-  "description": "Welcome to the Blogging Website! This platform allows you to share your thoughts, create engaging content, and interact with your audience through a modern and user-friendly blogging experience.",
+  "description": "Welcome to Blog App! This platform allows you to share your thoughts, create engaging content, and interact with your audience through a modern and user-friendly blogging experience.",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anisha1903/Blog-App.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anisha1903/Blog-App/issues"
+  },
+  "homepage": "https://github.com/Anisha1903/Blog-App#readme"
 }
