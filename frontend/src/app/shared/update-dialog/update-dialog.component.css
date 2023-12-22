@@ -1,0 +1,51 @@
+
+.container {
+    margin: 0px auto;
+    border-radius: 3px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+@media (max-width: 767px) {
+    /* Mobile view */
+    .post-container {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet view */
+    .post-container {
+        padding: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large screen view */
+    .post-container {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,100 @@
+/* Base styles for all screen sizes */
+
+.careers {
+    background-color: #f9f9f9;
+    padding: 50px 10px; /* Add padding to the sides for all screen sizes */
+    text-align: center;
+}
+
+.careers-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.careers h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.careers p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Job Listings Section */
+
+.job-listings h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.job {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.job h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.job p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #0077aa;
+}
+
+/* Media queries for responsive design */
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .careers {
+        padding: 20px 0;
+    }
+
+    .careers-card {
+        max-width: 600px;
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    .careers {
+        padding: 20px 0;
+    }
+
+    .careers-card {
+        max-width: 90%;
+    }
+}

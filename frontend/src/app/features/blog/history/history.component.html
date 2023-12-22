@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Blog History</h1>
+    <div class="blogcard" *ngFor="let item of blogArray">
+        <div class="blog-content">
+            <div class="image">
+                <!-- <img src="http://localhost:4000/{{item.blogImage}}" alt="Blog Image"> -->
+                <img id="blog_image" [src]="apiUrl + '/' + item.blogImage" alt="blog_image" />
+            </div>
+            <div class="content">
+                <div>
+                    <h2>{{item.title}}</h2>
+                    <p class="category">Category: {{item.category}}</p>
+                    <p class="description">{{item.description}}</p>
+                    <p class="author">Author: {{item.author}}</p>
+                </div>
+  
+            </div>
+            <div class="actions">
+                <div>
+                    <button class="update" (click)="Openpopup(item)"><i class="fas fa-edit"></i> </button>
+                </div>
+                <div>
+                    <button class="delete" (click)="deleteBlog(item._id)"><i class="fas fa-trash"></i> </button>
+                </div>
+                <div>
+                    <button routerLink="/" class="view"><i class="fas fa-eye"></i> </button>
+                </div>
+                <div>
+                    <button class="share" (click)="shareOnWhatsApp(item._id)"><i class="fas fa-share"></i> </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Repeat the card structure for each blog post -->
+</div>

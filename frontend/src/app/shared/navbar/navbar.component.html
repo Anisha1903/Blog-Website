@@ -1,0 +1,93 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="d-flex align-items-center justify-content-between w-100">
+            <h1>Blogging Website</h1>
+            <div>
+                <button mat-icon-button [matMenuTriggerFor]="menu" class="large-button mx-3">
+                    <span class="material-icons icon">account_circle</span>
+                    <!-- <span>
+                        <img src=http://localhost:4000/{{profile}} alt="profile">
+                    </span> -->
+
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>account_circle</mat-icon>
+                        <span *ngIf="loggedIn">{{userName1+" "+userName2}}</span>
+                        <span *ngIf="!loggedIn">{{userName3}}</span>
+                    </button>
+
+                    <button mat-menu-item *ngIf="!loggedIn" routerLink="auth/login">
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>Login</span>
+                    </button>
+                    <button mat-menu-item (click)="onLogout()" *ngIf="loggedIn" routerLink="auth/login">
+                        <mat-icon>power_settings_new</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="false" mode="side" position="start">
+        <mat-nav-list>
+            <mat-list-item>
+                <button color="primary" routerLink="" mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button color="primary" routerLink="dashboard/about" mat-button><mat-icon>account_circle</mat-icon>
+                    About</button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button color="primary" routerLink="dashboard/contact" mat-button><mat-icon>question_answer</mat-icon>
+                    Contact</button>
+            </mat-list-item>
+
+            <mat-list-item>
+                <button color="primary" routerLink="dashboard/careers" mat-button><mat-icon>verified_user</mat-icon>
+                    Careers</button>
+            </mat-list-item>
+
+            <mat-list-item *ngIf="loggedIn">
+                <button [matMenuTriggerFor]="options" color="primary" mat-button><mat-icon>sort</mat-icon> Blog</button>
+                <mat-menu #options="matMenu">
+                    <button color="accent" routerLink="blog/newpost" mat-menu-item><mat-icon>description</mat-icon>New
+                        Post</button>
+                    <button routerLink="blog/history" mat-menu-item><mat-icon>history_toggle_off</mat-icon> Blog
+                        History</button>
+                    <button routerLink="blog/settings" mat-menu-item><mat-icon>settings </mat-icon>Settings</button>
+                </mat-menu>
+            </mat-list-item>
+
+            <mat-list-item *ngIf="!loggedIn">
+                <button color="primary" routerLink="auth/login" mat-button><mat-icon>fingerprint</mat-icon>
+                    Login</button>
+            </mat-list-item>
+
+            <mat-list-item *ngIf="loggedIn">
+                <button color="primary" routerLink="auth/signup" (click)="onLogout()"
+                    mat-button><mat-icon>power_settings_new</mat-icon> Logout</button>
+            </mat-list-item>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="text-center min-vh-100">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

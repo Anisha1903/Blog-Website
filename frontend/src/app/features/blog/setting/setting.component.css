@@ -1,0 +1,80 @@
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.settings-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f3fdff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00ff37;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b318;
+}
+
+
+@media (max-width: 767px) {
+    /* Mobile view */
+    .setting-container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet view */
+    .setting-container {
+        padding: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large screen view */
+    .setting-container {
+        padding: 10px;
+    }
+}

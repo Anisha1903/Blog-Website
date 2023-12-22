@@ -1,0 +1,77 @@
+/* About Us Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-card {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Our Story Section */
+.about-content h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+/* Meet the Team Section */
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-member {
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1;
+    max-width: 250px;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.team-member-photo img:hover {
+    border-color: #0099cc;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #888;
+}

@@ -1,0 +1,125 @@
+<section class="background-radial-gradient overflow-hidden">
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          The best Blogging <br />
+          <span style="color: hsl(218, 81%, 75%)">Website for your Journey</span>
+        </h1>
+        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+          In our rapidly changing world, the value of continuous learning cannot be overstated. Gone are the days when
+          education was something you completed in your youth and then used throughout your entire career. Today, the
+          ability to adapt and acquire new knowledge is a critical skill for personal and professional growth.
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label d-flex justify-content-start" for="form3Example1">First name</label>
+                    <input type="text" id="form3Example1" class="form-control" placeholder="Enter first name"
+                      formControlName="fname"
+                      [class.is-invalid]="myForm.get('fname')?.invalid && (myForm.get('fname')?.touched || myForm.get('fname')?.dirty)" />
+                    <div
+                      *ngIf="myForm.get('fname')?.invalid && (myForm.get('fname')?.touched || myForm.get('fname')?.dirty)"
+                      class="invalid-feedback">
+                      <div class="d-flex justify-content-start" *ngIf="myForm.get('fname')?.errors?.['required']">First
+                        Name is required.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label d-flex justify-content-start" for="form3Example2">Last name</label>
+                    <input type="text" id="form3Example2" class="form-control" placeholder="Enter last name"
+                      formControlName="lname"
+                      [class.is-invalid]="myForm.get('lname')?.invalid && (myForm.get('lname')?.touched || myForm.get('lname')?.dirty)" />
+                    <div
+                      *ngIf="myForm.get('lname')?.invalid && (myForm.get('lname')?.touched || myForm.get('lname')?.dirty)"
+                      class="invalid-feedback">
+                      <div class="d-flex justify-content-start" *ngIf="myForm.get('lname')?.errors?.['required']">Last
+                        Name is required.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label d-flex justify-content-start" for="form3Example3">Email address</label>
+                <input type="email" id="form3Example3" class="form-control" placeholder="Enter your email"
+                  formControlName="email"
+                  [class.is-invalid]="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)" />
+                <div
+                  *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.touched || myForm.get('email')?.dirty)"
+                  class="invalid-feedback">
+                  <div class="d-flex justify-content-start" *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</div>
+                  <div class="d-flex justify-content-start" *ngIf="myForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label d-flex justify-content-start" for="form3Example4">Password</label>
+                <input type="password" id="form3Example4" class="form-control" placeholder="Enter your password"
+                  formControlName="password" [class.is-invalid]="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)"/>
+                <div
+                  *ngIf="myForm.controls['password'].invalid && (myForm.controls['password'].touched || myForm.controls['password'].dirty)"
+                  class="invalid-feedback">
+                  <div class="d-flex justify-content-start" *ngIf="myForm.controls['password'].hasError('required')">Password is required.</div>
+                  <div class="d-flex justify-content-start" *ngIf="myForm.controls['password'].hasError('minlength')">Password must be at least 8 characters
+                    long.</div>
+                </div>
+              </div>
+
+              <div id="login">
+                Already have an account ?
+                <a routerLinkActive="active" routerLink="/auth/login">Login</a>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-block mb-4">
+                  Sign up
+                </button>
+              </div>
+
+
+
+
+
+
+              <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-linkedin"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
