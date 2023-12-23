@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Welcome to Blog App! This platform allows you to share your thoughts, create engaging content, and interact with your audience through a modern and user-friendly blogging experience.",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start",
+    "prebuild": "cd backend && npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "postbuild": "mv frontend/build backend/src/public"
   },
   "repository": {
     "type": "git",
