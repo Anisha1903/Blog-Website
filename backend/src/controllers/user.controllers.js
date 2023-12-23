@@ -57,9 +57,6 @@ const registerHandler = async (req, res) => {
     }
 }
 
-
-
-
 const loginHandler = async (req, res) => {
     try {
         const { email, password } = req.body;

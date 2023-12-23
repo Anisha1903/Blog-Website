@@ -4,6 +4,7 @@
   "description": "Welcome to Blog App! This platform allows you to share your thoughts, create engaging content, and interact with your audience through a modern and user-friendly blogging experience.",
   "main": "index.js",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

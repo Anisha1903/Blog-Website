@@ -32,3 +32,4 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => console.log(`listening on http://localhost:${port}`));
 require('./src/db/database')
+
