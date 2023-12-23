@@ -11,7 +11,7 @@
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "start-backend": "cd backend && npm start",
     "start-frontend": "cd frontend && npm start",
-    "prebuild": "cd backend && npm install && cd ../frontend && npm install",
+    "prebuild": "cd backend && npm install && cd frontend && npm install",
     "build": "cd frontend && npm run build",
     "postbuild": "mv frontend/dist backend/src/dist"
   },
