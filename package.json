@@ -13,7 +13,7 @@
     "start-frontend": "cd frontend && npm start",
     "prebuild": "cd backend && npm install && cd ../frontend && npm install",
     "build": "cd frontend && npm run build",
-    "postbuild": "mv frontend/dist backend/src/dist"
+    "postbuild": "move frontend/dist backend/src/dist"
   },
   "repository": {
     "type": "git",
