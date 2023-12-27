@@ -64,4 +64,4 @@ Create, edit, and publish your blog posts.
 Engage with readers through comments and discussions.
 
 ## Deployment
-The Blogging Website is deployed and live! You can access it at https://blogtale.netlify.app for a live demo.
+The Blogging Website is deployed and live! You can access it at [https://658c74f9aa8bc81facb75bbb--reliable-hotteok-41612e.netlify.app/] for a live demo.
